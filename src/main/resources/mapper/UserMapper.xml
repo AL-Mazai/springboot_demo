@@ -5,5 +5,8 @@
     <select id="getAllUsers" resultType="User">
         select * from user;
     </select>
+    <select id="getUserById" resultType="com.example.demo.pojo.User">
+
+    </select>
 </mapper>
 
