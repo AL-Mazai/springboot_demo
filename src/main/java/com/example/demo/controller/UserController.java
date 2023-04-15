@@ -12,17 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 //@ResponseBody
 public class UserController {
     @Autowired
     private UserService userService;
 
     @GetMapping("/get")
-    public String getAllUser(){
+    public List<User> getAllUser(){
         List<User> userList = userService.getAllUsers();
-        System.out.println(userList);
-        return "hello";
+        return userList;
     }
 
 }
