@@ -20,8 +20,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserById() {
-        User user = userMapper.getUserById();
+    public User getUserById(int id) {
+        User user = userMapper.getUserById(id);
         return user;
     }
+
+    @Override
+    public boolean UpdateUserName(String name, int id) {
+        boolean isUpdate = userMapper.UpdateUserName(name, id);
+        return isUpdate;
+    }
+
+
 }

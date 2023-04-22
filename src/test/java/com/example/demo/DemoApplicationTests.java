@@ -19,4 +19,8 @@ class DemoApplicationTests {
         List<User> userList = userService.getAllUsers();
         System.out.println(userList);
     }
+    @Test
+    public void Test(){
+
+    }
 }

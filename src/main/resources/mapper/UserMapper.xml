@@ -2,11 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.demo.mapper.UserMapper">
+    <update id="UpdateUserName">
+        update user set name = #{name} where id = #{id}
+    </update>
     <select id="getAllUsers" resultType="User">
         select * from user;
     </select>
-    <select id="getUserById" resultType="com.example.demo.pojo.User">
-
+    <select id="getUserById" resultType="User">
+        select * from user where id = #{id}
     </select>
 </mapper>
 
