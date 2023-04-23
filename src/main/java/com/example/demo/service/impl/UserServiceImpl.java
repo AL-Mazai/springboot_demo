@@ -13,22 +13,33 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Override
-    public List<User> getAllUsers() {
-        List<User> userList = userMapper.getAllUsers();
-        return userList;
+    public List<User> findByName(String userName) {
+        return userMapper.findUserByName(userName);
     }
 
-    @Override
-    public User getUserById(int id) {
-        User user = userMapper.getUserById(id);
+    public List<User> queryPage(Integer startRows) {
+        return userMapper.queryPage(startRows);
+    }
+
+    public int getRowCount() {
+        return userMapper.getRowCount();
+    }
+
+    public User insertUser(User user) {
+        userMapper.insertUser(user);
         return user;
     }
 
-    @Override
-    public boolean UpdateUserName(String name, int id) {
-        boolean isUpdate = userMapper.UpdateUserName(name, id);
-        return isUpdate;
+    public List<User> ListUser(){
+        return userMapper.ListUser();
+    }
+
+    public int Update(User user){
+        return userMapper.Update(user);
+    }
+
+    public int delete(int userId){
+        return userMapper.delete(userId);
     }
 
 

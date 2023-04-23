@@ -7,8 +7,17 @@ import java.util.List;
 
 @Repository
 public interface UserMapper {
-    List<User> getAllUsers();
-    User getUserById(int id);
+    public List<User> findUserByName(String userName);
 
-    boolean UpdateUserName(String name, int id);
+    public List<User> ListUser();
+
+    public List<User> queryPage(Integer startRows);
+
+    public int getRowCount();
+
+    public int insertUser(User user);
+
+    public int delete(int userId);
+
+    public int Update(User user);
 }

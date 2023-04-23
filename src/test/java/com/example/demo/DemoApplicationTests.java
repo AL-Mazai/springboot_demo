@@ -12,15 +12,5 @@ import java.util.List;
 @SpringBootTest
 class DemoApplicationTests {
 
-    @Autowired
-    private UserService userService;
-    @Test
-    public void getAllUsersTest(){
-        List<User> userList = userService.getAllUsers();
-        System.out.println(userList);
-    }
-    @Test
-    public void Test(){
 
-    }
 }
